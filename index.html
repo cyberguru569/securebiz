@@ -3,56 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CG</title>
+    <title>Secure Biz</title>
+     <link rel="icon" type="image/jpg" href="sblogo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-.whatsapp-widget { position: fixed; bottom: 20px; right: 20px;
-z-index: 1000;
+.whatsapp-widget { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    z-index: 1000;
 }
-.whatsapp-button { background-color: #25D366; border-radius: 50%;
-width: 60px; height: 60px; display: flex;
-align-items: center; justify-content: center; cursor: pointer;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.whatsapp-button { 
+    background-color: #25D366; 
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
 }
-.whatsapp-button img { width: 30px;
+
+
+.whatsapp-widget { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    z-index: 1000;
 }
-.chat-window { display: none;
-background-color: white; border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 250px;
-position: absolute; bottom: 80px; right: 0;
-padding: 15px; text-align: center;
+.whatsapp-button { 
+    background-color: #25D366; 
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.whatsapp-button img { 
+    width: 30px;
+}
+.chat-window { 
+    display: none;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 250px;
+    position: absolute; 
+    bottom: 80px; 
+    right: 0;
+    padding: 15px; 
+    text-align: center;
 }
 .chat-window a {
-background-color: #25D366; color: white;
-padding: 10px;
-text-decoration: none;
-border-radius: 5px; display: inline-block; margin-top: 10px;
+    background-color: #25D366; 
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px; 
+    display: inline-block; 
+    margin-top: 10px;
 }
-.chat-window.active { display: block;
+.chat-window.active { 
+    display: block;
 }
 
 p {
-            word-spacing: -0.05em;
-            text-align:justify-all;
-     /*       word-spacing: -4px;  /* Reduces the gap between words */
-        }*/
+    word-spacing: -0.05em;
+    text-align:justify-all;
+}
 
+.logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: bg-blue-700;
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 1rem;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 640px) {
+    .logo-img {
+        height: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo-container {
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+    .logo-img {
+        height: 60px;
+    }
+}
 </style>
 </head>
 <body class="bg-blue-700">
-<!-- <body class="bg-gradient-to-r from-indigo-500 from-50% via-sky-500 via-30% to-emerald-500 to-90%"> -->
-   <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full p-5 z-50 lg:w-1/2">
-    <ul class="flex space-x-6 justify-center">
-        <li><a href="#home" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">Home</a></li>
-        <li><a href="#about" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">About</a></li>
-        <li><a href="#services" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">Services</a></li>
-        <li><a href="#contact" class="text-gray-700 hover:text-blue-500 transition-colors whitespace-nowrap font-semibold">Contact Us</a></li>
-    </ul>
-</nav>
+    <header class="logo-container">
+        <img src="sblogo.jpg" alt="Kavachh Logo" class="logo-img">
+    </header>
+
+    <nav class="fixed top-16 lg:top-20 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full p-5 z-50 lg:w-1/2">
+        <ul class="flex space-x-6 justify-center">
+            <li><a href="#home" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">Home</a></li>
+            <li><a href="#about" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">About</a></li>
+            <li><a href="#services" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">Services</a></li>
+            <li><a href="#contact" class="text-gray-700 hover:text-blue-500 transition-colors whitespace-nowrap font-semibold">Contact Us</a></li>
+        </ul>
+    </nav>
  
-    <!-- Dummy content to allow scrolling -->
-   <div class="min-h-screen p-4 sm:p-8 pt-16">
+    <div class="min-h-screen p-4 sm:p-8 pt-28">
         <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center justify-center">
             <div class="bg-blue-600 text-white p-4 sm:p-8 w-full">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8">Why Cybersecurity?</h1>
@@ -68,7 +143,7 @@ p {
         </section>
     </div>
 
-    <div class="min-h-screen p-4 sm:p-8 pt-16">
+    <div class="min-h-screen p-4 sm:p-8 pt-28">
         <section id="about" class="min-h-[calc(100vh-4rem)] flex items-center justify-center">
             <div class="bg-blue-600 text-white p-4 sm:p-8 w-full">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8">About Us</h1>
@@ -84,7 +159,7 @@ p {
         </section>
     </div>
 
-    <div class="min-h-screen p-4 sm:p-8 pt-16">
+    <div class="min-h-screen p-4 sm:p-8 pt-28">
         <section id="services" class="min-h-[calc(100vh-4rem)] flex items-center justify-center">
             <div class="bg-blue-600 text-white p-4 sm:p-8 w-full">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8">Our Services</h1>
@@ -109,68 +184,70 @@ p {
             </div>
         </section>
     </div>
-<section id="contact">
-<footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <!-- Contact Information -->
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
-                    <p class="text-sm">Email: <a href="mailto:cyberguru569@gmail.com" class="hover:text-blue-300">cyberguru569@gmail.com</a></p>
-                    <p class="text-sm">Phone: <a href="tel:+1234567890" class="hover:text-blue-300">+91 9818753407</a></p>
-                    <p class="text-sm">Address:Delhi, India</p>
-                </div>
 
-                <!-- Social Media Links -->
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#home" class="hover:text-blue-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.59 8.08 8.36 9.44v-6.68H7.76v-2.76h2.64V9.72c0-2.61 1.59-4.04 3.92-4.04 1.11 0 2.07.08 2.35.12v2.72h-1.61c-1.26 0-1.5.6-1.5 1.48v1.94h3.01l-.39 2.76h-2.62v6.68c4.77-1.36 8.36-5.03 8.36-9.44 0-5.5-4.46-9.96-9.96-9.96z"/>
-                            </svg>
-                        </a>
-                        <a href="#home" class="hover:text-blue-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23.95 4.83c-.88.39-1.83.65-2.82.77 1.01-.61 1.79-1.57 2.16-2.72-.95.56-2 .97-3.12 1.19-.9-.96-2.18-1.56-3.6-1.56-2.72 0-4.93 2.21-4.93 4.93 0 .39.04.77.13 1.13C7.69 8.31 4.07 6.34 1.64 3.43c-.42.72-.66 1.56-.66 2.46 0 1.7.86 3.2 2.17 4.08-.8-.03-1.55-.24-2.21-.61v.06c0 2.38 1.69 4.36 3.94 4.81-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.97 2.46 3.4 4.63 3.44-1.7 1.33-3.84 2.12-6.17 2.12-.4 0-.79-.02-1.18-.07 2.18 1.4 4.77 2.22 7.56 2.22 9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.01-.63.96-.69 1.79-1.56 2.45-2.55z"/>
-                            </svg>
-                        </a>
-                        <a href="#home" class="hover:text-blue-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.55 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 5.5 4.46 9.96 9.96 9.96s9.96-4.46 9.96-9.96c0-5.5-4.46-9.96-9.96-9.96zm0 18.36c-4.62 0-8.36-3.74-8.36-8.36s3.74-8.36 8.36-8.36 8.36 3.74 8.36 8.36-3.74 8.36-8.36 8.36zm9.24-14.76c-.39 0-.71.32-.71.71v2.83c0 .39.32.71.71.71h2.83c.39 0 .71-.32.71-.71v-2.83c0-.39-.32-.71-.71-.71h-2.83zm-9.24 6.36c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8.36c-1.88 0-3.36 1.48-3.36 3.36s1.48 3.36 3.36 3.36 3.36-1.48 3.36-3.36-1.48-3.36-3.36-3.36z"/>
-                            </svg>
-                        </a>
+    <section id="contact">
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    
+                    <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                        <div class="mb-6 md:mb-0">
+                            <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                            <p class="text-sm">Email: <a href="mailto:cyberguru569@gmail.com" class="hover:text-blue-300">cyberguru569@gmail.com</a></p>
+                            <p class="text-sm">Phone: <a href="tel:+1234567890" class="hover:text-blue-300">+91 9818753407</a></p>
+                            <p class="text-sm">Address: Delhi, India</p>
+                        </div>
+                         <div class="mb-6 md:mb-0">
+                        <img src="sblogo.jpg" alt="Kavachh Logo" class="h-8 md:h-10 mb-4">
                     </div>
+                        <div class="mb-6 md:mb-0">
+                            <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#home" class="hover:text-blue-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.59 8.08 8.36 9.44v-6.68H7.76v-2.76h2.64V9.72c0-2.61 1.59-4.04 3.92-4.04 1.11 0 2.07.08 2.35.12v2.72h-1.61c-1.26 0-1.5.6-1.5 1.48v1.94h3.01l-.39 2.76h-2.62v6.68c4.77-1.36 8.36-5.03 8.36-9.44 0-5.5-4.46-9.96-9.96-9.96z"/>
+                                    </svg>
+                                </a>
+                                <a href="#home" class="hover:text-blue-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.95 4.83c-.88.39-1.83.65-2.82.77 1.01-.61 1.79-1.57 2.16-2.72-.95.56-2 .97-3.12 1.19-.9-.96-2.18-1.56-3.6-1.56-2.72 0-4.93 2.21-4.93 4.93 0 .39.04.77.13 1.13C7.69 8.31 4.07 6.34 1.64 3.43c-.42.72-.66 1.56-.66 2.46 0 1.7.86 3.2 2.17 4.08-.8-.03-1.55-.24-2.21-.61v.06c0 2.38 1.69 4.36 3.94 4.81-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.97 2.46 3.4 4.63 3.44-1.7 1.33-3.84 2.12-6.17 2.12-.4 0-.79-.02-1.18-.07 2.18 1.4 4.77 2.22 7.56 2.22 9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.01-.63.96-.69 1.79-1.56 2.45-2.55z"/>
+                                    </svg>
+                                </a>
+                                <a href="#home" class="hover:text-blue-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.55 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 5.5 4.46 9.96 9.96 9.96s9.96-4.46 9.96-9.96c0-5.5-4.46-9.96-9.96-9.96zm0 18.36c-4.62 0-8.36-3.74-8.36-8.36s3.74-8.36 8.36-8.36 8.36 3.74 8.36 8.36-3.74 8.36-8.36 8.36zm9.24-14.76c-.39 0-.71.32-.71.71v2.83c0 .39.32.71.71.71h2.83c.39 0 .71-.32.71-.71v-2.83c0-.39-.32-.71-.71-.71h-2.83zm-9.24 6.36c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8.36c-1.88 0-3.36 1.48-3.36 3.36s1.48 3.36 3.36 3.36 3.36-1.48 3.36-3.36-1.48-3.36-3.36-3.36z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-center text-sm">
+                        <p>© 2025 Kavachh. All rights reserved.</p>
+                    </div>
+
                 </div>
             </div>
-            <div class="mt-6 text-center text-sm">
-                <p>&copy; 2025 Kavachh. All rights reserved.</p>
-            </div>
+        </footer>
+    </section>
+
+    <div class="whatsapp-widget">
+        <div class="whatsapp-button" onclick="toggleChat()">
+            <img src="https://upload.wikimedia.com/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         </div>
-    </footer>
-  </section>
-
-
-
-
-
-<!-- WhatsApp Widget -->
-<div class="whatsapp-widget">
-<div class="whatsapp-button" onclick="toggleChat()">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</div>
-<div class="chat-window" id="chatWindow">
-<h3>Chat with Us!</h3>
-<p>Ask us anything, we're here to help.</p>
-<a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
-Start WhatsApp Chat
-</a>
-</div>
-</div>
+        <div class="chat-window" id="chatWindow">
+            <h3>Chat with Us!</h3>
+            <p>Ask us anything, we're here to help.</p>
+            <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
+                Start WhatsApp Chat
+            </a>
+        </div>
+    </div>
 
 <script>
 function toggleChat() {
-const chatWindow = document.getElementById('chatWindow'); chatWindow.classList.toggle('active');
+    const chatWindow = document.getElementById('chatWindow'); 
+    chatWindow.classList.toggle('active');
 }
 </script>
 </body>
