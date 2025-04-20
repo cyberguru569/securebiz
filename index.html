@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CG</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+.whatsapp-widget { position: fixed; bottom: 20px; right: 20px;
+z-index: 1000;
+}
+.whatsapp-button { background-color: #25D366; border-radius: 50%;
+width: 60px; height: 60px; display: flex;
+align-items: center; justify-content: center; cursor: pointer;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.whatsapp-button img { width: 30px;
+}
+.chat-window { display: none;
+background-color: white; border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 250px;
+position: absolute; bottom: 80px; right: 0;
+padding: 15px; text-align: center;
+}
+.chat-window a {
+background-color: #25D366; color: white;
+padding: 10px;
+text-decoration: none;
+border-radius: 5px; display: inline-block; margin-top: 10px;
+}
+.chat-window.active { display: block;
+}
+</style>
 </head>
 <body class="bg-blue-700">
 <!-- <body class="bg-gradient-to-r from-indigo-500 from-50% via-sky-500 via-30% to-emerald-500 to-90%"> -->
@@ -81,9 +108,9 @@
                 <!-- Contact Information -->
                 <div class="mb-6 md:mb-0">
                     <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
-                    <p class="text-sm">Email: <a href="mailto:info@kavachh.com" class="hover:text-blue-300">info@kavachh.com</a></p>
-                    <p class="text-sm">Phone: <a href="tel:+1234567890" class="hover:text-blue-300">+91 9999999999</a></p>
-                    <p class="text-sm">Address: 1234 Kavachh, Delhi, India</p>
+                    <p class="text-sm">Email: <a href="mailto:cyberguru569@gmail.com" class="hover:text-blue-300">cyberguru569@gmail.com</a></p>
+                    <p class="text-sm">Phone: <a href="tel:+1234567890" class="hover:text-blue-300">+91 9818753407</a></p>
+                    <p class="text-sm">Address:Delhi, India</p>
                 </div>
 
                 <!-- Social Media Links -->
@@ -114,5 +141,29 @@
         </div>
     </footer>
   </section>
+
+
+
+
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-widget">
+<div class="whatsapp-button" onclick="toggleChat()">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</div>
+<div class="chat-window" id="chatWindow">
+<h3>Chat with Us!</h3>
+<p>Ask us anything, we're here to help.</p>
+<a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
+Start WhatsApp Chat
+</a>
+</div>
+</div>
+
+<script>
+function toggleChat() {
+const chatWindow = document.getElementById('chatWindow'); chatWindow.classList.toggle('active');
+}
+</script>
 </body>
 </html>
