@@ -189,10 +189,9 @@ p {
             .nav-menu.scrolled ul {
                 display: flex;
             }
-         
-    }
-}
-
+            .hamburger {
+                display: none !important;
+            }
         }
 
         @media (max-width: 1023px) {
@@ -201,12 +200,9 @@ p {
             }
             .hamburger {
                 display: flex;
-                backgroung: black;
             }
             .mobile-menu.active {
-/*                 background: black; */
-                    backgroung: white;
-                    
+                background: black;
             }
            
         }
