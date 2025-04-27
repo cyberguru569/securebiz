@@ -1,31 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Biz</title>
      <link rel="icon" type="image/jpg" href="sblogo.jpg">
-      <link rel="stylesheet" type="text/css" href="contact.css">
-     
     <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" type="text/css" href="style.css"> 
 
-    
 </head>
 <body>
-       <header class="logo-container">
-        <img src="sblogo.jpg" alt="Kavachh Logo" class="logo-img">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Biz</title>
+    <link rel="icon" type="image/jpg" href="sblogo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body>
+      <header class="logo-container">
+        <img src="sblogo.jpg" alt="Secure Biz Logo" class="logo-img">
+        <nav class="nav-menu">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-white lg:text-black hover:black transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+
+        <div class="mobile-menu">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-gray-900 hover:text-blue-700 transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+        </div>
     </header>
 
-   <nav class="fixed top-16 lg:top-1 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full p-5 z-40 lg:w-1/2">
-        <ul class="flex space-x-6 justify-center">
-            <li><a href="index.html" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">Home</a></li>
-            <li><a href="index.html" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">About</a></li>
-            <li><a href="services.html" class="text-gray-700 hover:text-blue-500 transition-colors font-semibold">Services</a></li>
-            <li><a href="contact.html" class="text-gray-700 hover:text-blue-500 transition-colors whitespace-nowrap font-semibold">Contact Us</a></li>
-        </ul>
-    </nav> 
-    <div style="height: 100vh; overflow: hidden;">
+   
+
+    <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            if (scrollPosition > windowHeight / 2) {
+                navMenu.classList.add('scrolled');
+                mobileMenu.classList.add('scrolled');
+            } else {
+                navMenu.classList.remove('scrolled');
+                mobileMenu.classList.remove('scrolled');
+            }
+        });
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+ 
+    
+         <canvas id="matrix"></canvas>
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size to window size
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        // Characters to display (includes numbers, letters, and symbols)
+        const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
+        const fontSize = 14;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(1);
+
+        // Colors
+        const green = '#00FF00';
+        const faintGreen = 'rgba(0, 255, 0, 0.3)';
+
+        function draw() {
+            // Add semi-transparent black to create fade effect
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = green;
+            ctx.font = `${fontSize}px monospace`;
+
+            for (let i = 0; i < drops.length; i++) {
+                // Random character
+                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+
+                // Draw character
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                // Reset drop to top when it reaches bottom
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        // Animation loop
+        setInterval(draw, 33);
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+            drops.length = Math.floor(canvas.width / fontSize);
+            for (let i = 0; i < drops.length; i++) {
+                drops[i] = 1;
+            }
+        });
+    </script>
+   
+</head>
+<div style="height: 100vh; overflow: hidden;">
     <iframe 
         aria-label='Product Enquiry' 
         frameborder="0" 
@@ -33,6 +146,5 @@
         src='https://forms.zohopublic.in/santoshshuklasecu1/form/ProductEnquiry/formperma/h0LFz0rbJLeeKq5grIJWzb1QGEmiu8UINK4nw9c58uY'>
     </iframe>
 </div>
-  
 </body>
-</html> 
+</html>
