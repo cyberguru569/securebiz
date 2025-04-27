@@ -54,17 +54,17 @@
         const mobileMenu = document.querySelector('.mobile-menu');
         const hamburger = document.querySelector('.hamburger');
 
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            if (scrollPosition > windowHeight / 2) {
-                navMenu.classList.add('scrolled');
-                mobileMenu.classList.add('scrolled');
-            } else {
-                navMenu.classList.remove('scrolled');
-                mobileMenu.classList.remove('scrolled');
-            }
-        });
+        // window.addEventListener('scroll', () => {
+        //     const scrollPosition = window.scrollY;
+        //     const windowHeight = window.innerHeight;
+        //     if (scrollPosition > windowHeight / 2) {
+        //         navMenu.classList.add('scrolled');
+        //         mobileMenu.classList.add('scrolled');
+        //     } else {
+        //         navMenu.classList.remove('scrolled');
+        //         mobileMenu.classList.remove('scrolled');
+        //     }
+        // });
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
