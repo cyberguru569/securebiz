@@ -180,6 +180,15 @@ p {
             .logo-img {
                 height: 50px;
             }
+             .container {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // height: 100vh;
+width:100%;             
+    background: linear-gradient(to right,red,blue,lime); /* Blue to Purple gradient */
+}
+   
         }
 
         @media (min-width: 1024px) {
