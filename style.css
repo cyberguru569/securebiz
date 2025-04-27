@@ -199,11 +199,10 @@ p {
                 display: none;
             }
             .hamburger {
-                display: flex
-                background-color: #26304e;
+                display: flex;
             }
             .mobile-menu.active {
-                background: rgb(156, 152, 152);
+                background: black;
             }
            
         }
