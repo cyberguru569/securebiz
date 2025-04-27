@@ -71,14 +71,7 @@ p {
     text-align:justify-all;
 }
 
-/* // .container {
-//     // display: flex;
-//     // align-items: center;
-//     // justify-content: center;
-//     // height: 100vh;
-//     background: linear-gradient(to right,red,blue,lime); /* Blue to Purple gradient */
-// }
- */
+
 
 .logo-container {
             position: fixed;
@@ -210,15 +203,7 @@ p {
             .mobile-menu.active {
                 background: white;
             }
-/*             .container {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // height: 100vh;
-                width:100%;
-    background: linear-gradient(to right,red,blue,lime); /* Blue to Purple gradient */
-}
-        } */
+
 
  .card {
             perspective: 1000px;
