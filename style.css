@@ -128,7 +128,7 @@ p {
         .hamburger span {
             width: 25px;
             height: 3px;
-            background:black;
+            background:white;
             margin: 2px 0;
             transition: all 0.3s ease;
         }
@@ -202,7 +202,7 @@ p {
                 display: flex;
             }
             .mobile-menu.active {
-                background: white;
+                background: black;
             }
            
         }
