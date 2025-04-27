@@ -189,9 +189,12 @@ p {
             .nav-menu.scrolled ul {
                 display: flex;
             }
-            .hamburger {
-                display: none !important;
-            }
+           @media (max-width: 1023px) {
+    .hamburger span {
+        background: black;
+    }
+}
+
         }
 
         @media (max-width: 1023px) {
