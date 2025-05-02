@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #f9fbfc;
+  color: #222;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0a1f44;
+}
+
+a {
+  text-decoration: none;
+}
+
+header.hero {
+  background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)), 
+    url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5); /* optional: subtle background */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* shadow for glow */
+ color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+
+}
+
+.feature-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.feature-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-box img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.feature-box ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.why-us {
+  margin-top: 60px;
+  background: #eef9f8;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.why-us ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-us ul li {
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #00c896;
+  color: #fff;
+  margin-top: 60px;
+  border-radius: 8px;
+}
+
+.cta-button {
+  background: #0a1f44;
+  color: #fff;
+  padding: 12px 30px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+footer {
+  background: #0a1f44;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
