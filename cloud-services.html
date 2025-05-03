@@ -1,36 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Biz</title>
-    <link rel="icon" type="image/jpg" href="sblogo.jpg">
+     <link rel="icon" type="image/jpg" href="sblogo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="cloud-style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head>   
+   <link rel="stylesheet" type="text/css" href="styles.css"> 
+  <link rel="stylesheet" href="cloud-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!--     <style>
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #000;
+            margin: 2px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -75%;
+            width: 75%;
+            max-width: 300px;
+            height: 100%;
+            background: #fff;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+            transition: right 0.3s ease-in-out;
+            z-index: 999;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            margin-top: 40px;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu {
+                display: none;
+            }
+        }
+    </style>
+</head> -->
+</head>
 <body>
-    <header class="logo-container bg-gray-800 lg:bg-transparent">
-        <div class="flex items-center justify-between px-4 py-4 lg:px-8">
-            <img src="sblogo.jpg" alt="Secure Biz Logo" class="logo-img h-12">
-            <nav class="nav-menu">
-                <div class="hamburger lg:hidden">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="hidden lg:flex space-x-6">
-                    <li><a href="index.html" class="text-white lg:text-black hover:text-blue-700 transition-colors font-bold text-lg">Home</a></li>
-                    <li><a href="about.html" class="text-white lg:text-black hover:text-blue-700 transition-colors font-bold text-lg">About</a></li>
-                    <li><a href="services.html" class="text-white lg:text-black hover:text-blue-700 transition-colors font-bold text-lg">Services</a></li>
-                    <li><a href="contact.html" class="text-white lg:text-black hover:text-blue-700 transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="mobile-menu hidden lg:hidden bg-white shadow-lg">
-            <ul class="flex flex-col space-y-4 p-4">
+<header class="logo-container">
+        <img src="sblogo.jpg" alt="Secure Biz Logo" class="logo-img">
+        <nav class="nav-menu">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-white lg:text-black hover:black transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+
+        <div class="mobile-menu">
+            <ul class="flex flex-col space-y-4">
                 <li><a href="index.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Home</a></li>
                 <li><a href="about.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">About</a></li>
                 <li><a href="services.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Services</a></li>
@@ -38,22 +112,25 @@
             </ul>
         </div>
     </header>
- <script>
+
+   
+
+    <script>
         const navMenu = document.querySelector('.nav-menu');
         const mobileMenu = document.querySelector('.mobile-menu');
         const hamburger = document.querySelector('.hamburger');
 
-        // window.addEventListener('scroll', () => {
-        //     const scrollPosition = window.scrollY;
-        //     const windowHeight = window.innerHeight;
-        //     if (scrollPosition > windowHeight / 2) {
-        //         navMenu.classList.add('scrolled');
-        //         mobileMenu.classList.add('scrolled');
-        //     } else {
-        //         navMenu.classList.remove('scrolled');
-        //         mobileMenu.classList.remove('scrolled');
-        //     }
-        // });
+            // window.addEventListener('scroll', () => {
+            //     const scrollPosition = window.scrollY;
+            //     const windowHeight = window.innerHeight;
+            //     if (scrollPosition > windowHeight / 2) {
+            //         navMenu.classList.add('scrolled');
+            //         mobileMenu.classList.add('scrolled');
+            //     } else {
+            //         navMenu.classList.remove('scrolled');
+            //         mobileMenu.classList.remove('scrolled');
+            //     }
+            // });
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -66,129 +143,128 @@
                 mobileMenu.classList.remove('active');
             });
         });
-    </script> 
-    <header class="hero bg-gray-100 py-16 text-center">
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="text-4xl font-bold">Cloud Resource Licensing & Support</h1>
-            <p class="text-lg mt-4">Comprehensive solutions for Azure, AWS, and Google Cloud – licensing, support, and security.</p>
-        </div>
-    </header>
+    </script>
+   <header class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Cloud Resource Licensing & Support</h1>
+      <p>Comprehensive solutions for Azure, AWS, and Google Cloud – licensing, support, and security.</p>
+    </div>
+  </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="intro text-center" data-aos="fade-up">
-            <h2 class="text-3xl font-bold">Built for BUSINESSES who rely on the CLOUD</h2>
-            <p class="mt-4"><strong>Secure Biz</strong> helps businesses leverage the power of the cloud while staying compliant and secure. We provide full-spectrum support across <strong>Microsoft Azure</strong>, <strong>Google Cloud Platform</strong>, and <strong>AWS</strong>.</p>
-        </section>
+  <main class="container">
+    <section class="intro" data-aos="fade-up">
+      <h2>Built for BUSINESSES who rely on the CLOUD</h2>
+      <p><strong>Secure Biz</strong> helps businesses leverage the power of the cloud while staying compliant and secure. We provide full-spectrum support across <strong>Microsoft Azure</strong>, <strong>Google Cloud Platform</strong>, and <strong>AWS</strong>.</p>
+    </section>
 
-        <section class="features grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div class="feature-box p-6 bg-white shadow-lg rounded-lg" data-aos="fade-right">
-                <img src="LOGOCYBERBIZ-removebg-preview.png" alt="Cloud Licensing Icon" class="h-16 mx-auto mb-4" />
-                <h3 class="text-xl font-semibold">🧾 Cloud Licensing</h3>
-                <ul class="list-disc pl-5 mt-4">
-                    <li>Azure Reserved & Pay-as-you-go</li>
-                    <li>GCP Budget Optimization</li>
-                    <li>AWS EC2 & Lambda Licensing</li>
-                    <li>Office 365 & Workspace Licensing</li>
-                </ul>
-            </div>
-            <div class="feature-box p-6 bg-white shadow-lg rounded-lg" data-aos="fade-up">
-                <img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" alt="Support Icon" class="h-16 mx-auto mb-4" />
-                <h3 class="text-xl font-semibold">🛠️ Cloud Support</h3>
-                <ul class="list-disc pl-5 mt-4">
-                    <li>24/7 Monitoring & Helpdesk</li>
-                    <li>Performance & Cost Optimization</li>
-                    <li>Cloud Migrations</li>
-                    <li>Custom Onboarding</li>
-                </ul>
-            </div>
-            <div class="feature-box p-6 bg-white shadow-lg rounded-lg" data-aos="fade-left">
-                <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="Security Icon" class="h-16 mx-auto mb-4" />
-                <h3 class="text-xl font-semibold">🔐 Cloud Security</h3>
-                <ul class="list-disc pl-5 mt-4">
-                    <li>IAM & Role-based Access</li>
-                    <li>Threat Detection & Alerts</li>
-                    <li>Regulatory Compliance (GDPR, HIPAA)</li>
-                    <li>Encryption & Secure Backups</li>
-                </ul>
-            </div>
-        </section>
+    <section class="features">
+      <div class="feature-box" data-aos="fade-right">
+        <img src="LOGOCYBERBIZ-removebg-preview.png" alt="Cloud Licensing Icon" />
+        <h3>🧾 Cloud Licensing</h3>
+        <ul>
+          <li>Azure Reserved & Pay-as-you-go</li>
+          <li>GCP Budget Optimization</li>
+          <li>AWS EC2 & Lambda Licensing</li>
+          <li>Office 365 & Workspace Licensing</li>
+        </ul>
+      </div>
+      <div class="feature-box" data-aos="fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" alt="Support Icon" />
+        <h3>🛠️ Cloud Support</h3>
+        <ul>
+          <li>24/7 Monitoring & Helpdesk</li>
+          <li>Performance & Cost Optimization</li>
+          <li>Cloud Migrations</li>
+          <li>Custom Onboarding</li>
+        </ul>
+      </div>
+      <div class="feature-box" data-aos="fade-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="Security Icon" />
+        <h3>🔐 Cloud Security</h3>
+        <ul>
+          <li>IAM & Role-based Access</li>
+          <li>Threat Detection & Alerts</li>
+          <li>Regulatory Compliance (GDPR, HIPAA)</li>
+          <li>Encryption & Secure Backups</li>
+        </ul>
+      </div>
+    </section>
 
-        <section class="why-us text-center mt-12" data-aos="zoom-in">
-            <h2 class="text-3xl font-bold">Why Choose Secure Biz?</h2>
-            <ul class="list-none mt-4 space-y-2">
-                <li>✔️ Certified Azure, AWS & GCP Experts</li>
-                <li>✔️ Full Cloud Lifecycle Support</li>
-                <li>✔️ Transparent Pricing – No Lock-in</li>
-                <li>✔️ Built with Security from Day One</li>
-            </ul>
-        </section>
+    <section class="why-us" data-aos="zoom-in">
+      <h2>Why Choose Secure Biz?</h2>
+      <ul>
+        <li>✔️ Certified Azure, AWS & GCP Experts</li>
+        <li>✔️ Full Cloud Lifecycle Support</li>
+        <li>✔️ Transparent Pricing – No Lock-in</li>
+        <li>✔️ Built with Security from Day One</li>
+      </ul>
+    </section>
 
-        <section class="cta text-center mt-12" id="contact" data-aos="fade-up">
-            <h2 class="text-3xl font-bold">Need Help Managing Your Cloud?</h2>
-            <p class="mt-4">Let our experts audit your environment or build your strategy from scratch.</p>
-            <a href="mailto:contact@securebiz.com" class="cta-button inline-block mt-4 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Request Free Consultation</a>
-        </section>
-    </main>
-
-    <section id="contact">
-        <footer class="bg-gray-800 text-white py-8">
-            <div class="mx-auto px-4">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex flex-col md:flex-row justify-between items-center w-full">
-                        <div class="mb-6 md:mb-0">
-                            <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
-                            <p class="text-sm">Email: <a href="mailto:info@securebiz.in" class="hover:text-blue-300">info@securebiz.in</a></p>
-                            <p class="text-sm">Phone: <a href="tel:+91 9818753407" class="hover:text-blue-300">+91 9818753407</a></p>
-                            <p class="text-sm">Address: Delhi, India</p>
-                        </div>
-                        <div class="mb-6 md:mb-0 text-center">
-                            <img src="sblogo.jpg" alt="SecureBiz" class="h-8 md:h-10 mb-4 mx-auto">
-                            <p class="text-sm">© 2025 SecureBiz. All rights reserved.</p>
-                        </div>
-                        <div class="mb-6 md:mb-0">
-                            <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
-                            <div class="flex space-x-4 justify-center">
-                                <a href="#home" class="hover:text-blue-300">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.59 8.08 8.36 9.44v-6.68H7.76v-2.76h2.64V9.72c0-2.61 1.59-4.04 3.92-4.04 1.11 0 2.07.08 2.35.12v2.72h-1.61c-1.26 0-1.5.6-1.5 1.48v1.94h3.01l-.39 2.76h-2.62v6.68c4.77-1.36 8.36-5.03 8.36-9.44 0-5.5-4.46-9.96-9.96-9.96z"/>
-                                    </svg>
-                                </a>
-                                <a href="#home" class="hover:text-blue-300">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M23.95 4.83c-.88.39-1.83.65-2.82.77 1.01-.61 1.79-1.57 2.16-2.72-.95.56-2 .97-3.12 1.19-.9-.96-2.18-1.56-3.6-1.56-2.72 0-4.93 2.21-4.93 4.93 0 .39.04.77.13 1.13C7.69 8.31 4.07 6.34 1.64 3.43c-.42.72-.66 1.56-.66 2.46 0 1.7.86 3.2 2.17 4.08-.8-.03-1.55-.24-2.21-.61v.06c0 2.38 1.69 4.36 3.94 4.81-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.97 2.46 3.4 4.63 3.44-1.7 1.33-3.84 2.12-6.17 2.12-.4 0-.79-.02-1.18-.07 2.18 1.4 4.77 2.22 7.56 2.22 9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.01-.63.96-.69 1.79-1.56 2.45-2.55z"/>
-                                    </svg>
-                                </a>
-                            </div>
+    <section class="cta" id="contact" data-aos="fade-up">
+      <h2>Need Help Managing Your Cloud?</h2>
+      <p>Let our experts audit your environment or build your strategy from scratch.</p>
+      <a href="mailto:contact@securebiz.com" class="cta-button">Request Free Consultation</a>
+    </section>
+  </main>
+ <section id="contact">
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                        <p class="text-sm">Email: <a href="mailto:info@securebiz.in" class="hover:text-blue-300">info@securebiz.in</a></p>
+                        <p class="text-sm">Phone: <a href="tel:+91 9818753407" class="hover:text-blue-300">+91 9818753407</a></p>
+                        <p class="text-sm">Address: Delhi, India</p>
+                    </div>
+                    <div class="mb-6 md:mb-0 text-center">
+                        <img src="sblogo.jpg" alt="KSecureBiz" class="h-8 md:h-10 mb-4 mx-auto">
+                        <p class="text-sm">© 2025 SecureBiz. All rights reserved.</p>
+                    </div>
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#home" class="hover:text-blue-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.59 8.08 8.36 9.44v-6.68H7.76v-2.76h2.64V9.72c0-2.61 1.59-4.04 3.92-4.04 1.11 0 2.07.08 2.35.12v2.72h-1.61c-1.26 0-1.5.6-1.5 1.48v1.94h3.01l-.39 2.76h-2.62v6.68c4.77-1.36 8.36-5.03 8.36-9.44 0-5.5-4.46-9.96-9.96-9.96z"/>
+                                </svg>
+                            </a>
+                            <a href="#home" class="hover:text-blue-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.95 4.83c-.88.39-1.83.65-2.82.77 1.01-.61 1.79-1.57 2.16-2.72-.95.56-2 .97-3.12 1.19-.9-.96-2.18-1.56-3.6-1.56-2.72 0-4.93 2.21-4.93 4.93 0 .39.04.77.13 1.13C7.69 8.31 4.07 6.34 1.64 3.43c-.42.72-.66 1.56-.66 2.46 0 1.7.86 3.2 2.17 4.08-.8-.03-1.55-.24-2.21-.61v.06c0 2.38 1.69 4.36 3.94 4.81-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.97 2.46 3.4 4.63 3.44-1.7 1.33-3.84 2.12-6.17 2.12-.4 0-.79-.02-1.18-.07 2.18 1.4 4.77 2.22 7.56 2.22 9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.01-.63.96-.69 1.79-1.56 2.45-2.55z"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </section>
-
-    <div class="whatsapp-widget fixed bottom-4 right-4">
-        <div class="whatsapp-button cursor-pointer" onclick="toggleChat()">
-            <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp" class="h-12">
         </div>
-        <div class="chat-window hidden bg-white shadow-lg rounded-lg p-4" id="chatWindow">
-            <h3 class="text-lg font-semibold">Chat with Us!</h3>
-            <p class="text-sm">Ask us anything, we're here to help.</p>
-            <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank" class="block mt-2 bg-green-500 text-white py-2 px-4 rounded-lg text-center">
+    </footer>
+</section>
+
+    <div class="whatsapp-widget">
+        <div class="whatsapp-button" onclick="toggleChat()">
+            <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp">
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <h3>Chat with Us!</h3>
+            <p>Ask us anything, we're here to help.</p>
+            <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
                 Start WhatsApp Chat
             </a>
         </div>
     </div>
 
-    <script>
-   
-
-        function toggleChat() {
-            const chatWindow = document.getElementById('chatWindow'); 
-            chatWindow.classList.toggle('hidden');
-        }
-
+<script>
+function toggleChat() {
+    const chatWindow = document.getElementById('chatWindow'); 
+    chatWindow.classList.toggle('active');
+}
 </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-      <script>  AOS.init();</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
