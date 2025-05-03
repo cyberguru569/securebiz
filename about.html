@@ -6,19 +6,11 @@
     <title>Secure Biz</title>
      <link rel="icon" type="image/jpg" href="sblogo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" type="text/css" href="styles.css"> 
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+ <link rel="stylesheet" type="text/css" href="about.css"> 
 
 </head>
-<body>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Biz</title>
-    <link rel="icon" type="image/jpg" href="sblogo.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+
 <body>
       <header class="logo-container">
         <img src="sblogo.jpg" alt="Secure Biz Logo" class="logo-img">
@@ -48,23 +40,23 @@
     </header>
 
    
-
-<!--     <script>
+ 
+    <script>
         const navMenu = document.querySelector('.nav-menu');
         const mobileMenu = document.querySelector('.mobile-menu');
         const hamburger = document.querySelector('.hamburger');
 
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            if (scrollPosition > windowHeight / 2) {
-                navMenu.classList.add('scrolled');
-                mobileMenu.classList.add('scrolled');
-            } else {
-                navMenu.classList.remove('scrolled');
-                mobileMenu.classList.remove('scrolled');
-            }
-        });
+        // window.addEventListener('scroll', () => {
+        //     const scrollPosition = window.scrollY;
+        //     const windowHeight = window.innerHeight;
+        //     if (scrollPosition > windowHeight / 2) {
+        //         navMenu.classList.add('scrolled');
+        //         mobileMenu.classList.add('scrolled');
+        //     } else {
+        //         navMenu.classList.remove('scrolled');
+        //         mobileMenu.classList.remove('scrolled');
+        //     }
+        // });
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -77,53 +69,20 @@
                 mobileMenu.classList.remove('active');
             });
         });
-    </script> -->
+    </script> 
  
-    <!-- <div class="min-h-screen p-4 sm:p-8 pt-28">
-        <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center justify-center">
-            <div class="bg-blue-600 text-white p-4 sm:p-8 w-full">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8">Why Cybersecurity?</h1>
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white/10 p-6 rounded-lg shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300" style="box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4), 0 2px 10px rgba(59, 130, 246, 0.3);">
-                        <p class="text-base sm:text-lg text-justify tracking-normal">Protect your business with cutting-edge cybersecurity solutions. Our expert team delivers robust protection against evolving threats, ensuring your data and operations remain safe. From threat detection to incident response, we provide comprehensive services tailored to your needs.</p>
-                    </div>
-                    <div class="bg-white/10 p-6 rounded-lg shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300" style="box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4), 0 2px 10px rgba(59, 130, 246, 0.3);">
-                        <p class="text-base sm:text-lg text-justify tracking-normal">Stay ahead of cybercriminals with our advanced tools and proactive strategies. We empower organizations to operate confidently in a digital world, safeguarding your assets and reputation. Partner with us to build a secure, resilient future.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="min-h-screen p-4 sm:p-8 pt-28">
-        <section id="about" class="min-h-[calc(100vh-4rem)] flex items-center justify-center">
-            <div class="bg-blue-600 text-white p-4 sm:p-8 w-full">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8">About Us</h1>
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white/10 p-6 rounded-lg shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300" style="box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4), 0 2px 10px rgba(59, 130, 246, 0.3);">
-                        <p class="text-base sm:text-lg text-justify tracking-normal">We are dedicated to safeguarding your digital world with cutting-edge cybersecurity solutions. Our mission is to empower businesses and individuals with robust protection against evolving cyber threats, ensuring peace of mind in an interconnected world.</p>
-                    </div>
-                    <div class="bg-white/10 p-6 rounded-lg shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300" style="box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4), 0 2px 10px rgba(59, 130, 246, 0.3);">
-                        <p class="text-base sm:text-lg text-justify tracking-normal">With a team of seasoned cybersecurity experts, we deliver innovative and tailored solutions to secure your data, networks, and systems. From threat detection to incident response, we provide comprehensive protection backed by years of industry experience.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
     
-        -->
          <canvas id="matrix"></canvas>
     <script>
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
 
         // Set canvas size to window size
-        canvas.height = window.innerHeight;
+        canvas.height = window.innerHeight/2;
         canvas.width = window.innerWidth;
 
         // Characters to display (includes numbers, letters, and symbols)
-        const chars = 'securebibizsecure';
+        const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
         const fontSize = 14;
         const columns = Math.floor(canvas.width / fontSize);
         const drops = Array(columns).fill(1);
@@ -161,7 +120,7 @@
 
         // Resize canvas on window resize
         window.addEventListener('resize', () => {
-            canvas.height = window.innerHeight;
+            canvas.height = window.innerHeight/2;
             canvas.width = window.innerWidth;
             drops.length = Math.floor(canvas.width / fontSize);
             for (let i = 0; i < drops.length; i++) {
@@ -170,4 +129,257 @@
         });
     </script>
    
-</head>
+    <header>
+        <h1>Secure Your Future with Secure Biz</h1>
+    </header>
+    <main>
+        <section class="content">
+            <p class="fade-in">
+                At Secure Biz, we provide cutting-edge cybersecurity solutions to safeguard your business from evolving digital threats. Our comprehensive services include advanced threat detection, penetration testing, and vulnerability assessments, designed to identify and mitigate risks before they can be exploited. With a team of certified experts leveraging state-of-the-art technology, we ensure your sensitive data, intellectual property, and customer information remain secure against cyberattacks, allowing you to focus on your core operations with confidence.
+            </p>
+            <p class="fade-in">
+                Our managed security services offer round-the-clock monitoring and rapid incident response to keep your systems protected at all times. We tailor our solutions to meet the unique needs of your industry, whether it’s healthcare, finance, or retail, ensuring compliance with regulatory standards like GDPR, HIPAA, and PCI-DSS. Additionally, our security awareness training empowers your employees to recognize and prevent phishing, social engineering, and other common attack vectors, fostering a culture of vigilance within your organization.
+            </p>
+            <p class="fade-in">
+                Partnering with Secure Biz means investing in proactive defense and long-term resilience. We also provide strategic consulting to help you develop robust cybersecurity policies and disaster recovery plans, minimizing downtime and ensuring business continuity. Our commitment to innovation and client success makes us a trusted partner in navigating the complex landscape of cybersecurity, delivering peace of mind in an increasingly connected world.
+            </p>
+        </section>
+    </main>
+    
+<div class="slider-container">
+    <header>
+        <h1>Our Partners</h1>
+    </header>
+        <div class="slider">
+            <div class="slide">
+                <img src="rblz.jpg" alt="Partner 1">
+            </div>
+            <div class="slide">
+                <img src="gtb.jpg" alt="Partner 2">
+            </div>
+            <div class="slide">
+                <img src="zoho.jpg" alt="Partner 3">
+            </div>
+            <div class="slide">
+                <img src="ipinfo.jpg" alt="Partner 4">
+            </div>
+            <div class="slide">
+                <img src="reti.jpg" alt="Partner 5">
+            </div>
+            <div class="slide">
+                <img src="infi.jpg" alt="Partner 6">
+            </div>
+        </div>
+        <button class="nav-button prev">&#10094;</button>
+        <button class="nav-button next">&#10095;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const slideWidth = slides[0].offsetWidth;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        function moveToNext() {
+            if (currentIndex < slides.length - getSlidesPerView()) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }
+
+        function moveToPrev() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slides.length - getSlidesPerView();
+            }
+            updateSlider();
+        }
+
+        function getSlidesPerView() {
+            if (window.innerWidth <= 480) return 2;
+            if (window.innerWidth <= 768) return 3;
+            return 5;
+        }
+
+        nextButton.addEventListener('click', moveToNext);
+        prevButton.addEventListener('click', moveToPrev);
+
+        window.addEventListener('resize', updateSlider);
+
+        // Auto-slide every 5 seconds
+        setInterval(moveToNext, 3000);
+
+        // Initial update
+        updateSlider();
+
+
+    
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const paragraphs = document.querySelectorAll('.fade-in');
+
+    // Function to check if an element is in the viewport
+    const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    // Function to add visible class to paragraphs in viewport
+    const showParagraphs = () => {
+        paragraphs.forEach((p, index) => {
+            if (isInViewport(p)) {
+                setTimeout(() => {
+                    p.classList.add('visible');
+                }, index * 300); // Staggered fade-in effect
+            }
+        });
+    };
+
+    // Run on load and on scroll
+    showParagraphs();
+    window.addEventListener('scroll', showParagraphs);
+});
+</script>
+<br/>
+<div class="container">
+        <header>
+        <h1>Our Team</h1>
+    </header>
+        <div class="team-grid">
+            <div class="team-card" data-member="1">
+                <!-- <img src="https://via.placeholder.com/150" alt="Alice Johnson"> -->
+                <h3>Santosh Shukla</h3>
+                <p class="role">Co-founder,CEO</p>
+                <p class="overview">Expert in threat intelligence with over 25 years of experience in cybersecurity.</p>
+                <button onclick="showOverlay(1)">Know More</button>
+            </div>
+            <div class="team-card" data-member="2">
+                <!-- <img src="https://via.placeholder.com/150" alt="Bob Smith"> -->
+                <h3>Shubham Kumar</h3>
+                <p class="role">CTO</p>
+                <p class="overview">Skilled in ethical hacking, cloud, and vulnerability assessments for enterprise systems.</p>
+                <button onclick="showOverlay(2)">Know More</button>
+            </div>
+            <div class="team-card" data-member="3">
+                <!-- <img src="https://via.placeholder.com/150" alt="Clara Lee"> -->
+                <h3>Shivendra Shukla</h3>
+                <p class="role">Developer</p>
+                <p class="overview">Adept at executing and delivering timely application facing any client issues.</p>
+                <button onclick="showOverlay(3)">Know More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="overlay-content" id="overlay-content">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        const teamMembers = {
+            1: {
+                name: "Santosh Shukla",
+                role: "LCo-founder & CEO",
+                details: "Santosh Shukla has led numerous high-profile incident response operations and specializes in advanced persistent threat (APT) analysis, and has expertise in cloud and various cyber related products."
+            },
+            2: {
+                name: "Shubham Kumar",
+                role: "CTO",
+                details: "Shubham Kumar has a knack for uncovering hidden vulnerabilities in complex systems. Certified Cloud Practicioner, Developer and ethical hacker,and has a knack of finding solution to and complex and challenging problems"
+            },
+            3: {
+                name: "Shivendra Shukla",
+                role: "Developer",
+                details: "Shivendra Shukla is a man of few words but has a treasure trove knowledge technically, don't judge him by his silence, if he is silent , he would be more or less playing with , algorithms, and killing software bugs"
+            }
+        };
+
+        function showOverlay(memberId) {
+            const member = teamMembers[memberId];
+            const overlayContent = document.getElementById('overlay-content');
+            overlayContent.innerHTML = `
+                <h2>${member.name}</h2>
+                <p class="role">${member.role}</p>
+                <p>${member.details}</p>
+                <button onclick="closeOverlay()">Close</button>
+            `;
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+    <br/>
+<section id="contact">
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                        <p class="text-sm">Email: <a href="mailto:cyberguru569@gmail.com" class="hover:text-blue-300">info@securebiz.in</a></p>
+                        <p class="text-sm">Phone: <a href="tel:+91 9818753407" class="hover:text-blue-300">+91 9818753407</a></p>
+                        <p class="text-sm">Address: Delhi, India</p>
+                    </div>
+                    <div class="mb-6 md:mb-0 text-center">
+                        <img src="sblogo.jpg" alt="KSecureBiz" class="h-8 md:h-10 mb-4 mx-auto">
+                        <p class="text-sm">© 2025 SecureBiz. All rights reserved.</p>
+                    </div>
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#home" class="hover:text-blue-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.59 8.08 8.36 9.44v-6.68H7.76v-2.76h2.64V9.72c0-2.61 1.59-4.04 3.92-4.04 1.11 0 2.07.08 2.35.12v2.72h-1.61c-1.26 0-1.5.6-1.5 1.48v1.94h3.01l-.39 2.76h-2.62v6.68c4.77-1.36 8.36-5.03 8.36-9.44 0-5.5-4.46-9.96-9.96-9.96z"/>
+                                </svg>
+                            </a>
+                            <a href="#home" class="hover:text-blue-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.95 4.83c-.88.39-1.83.65-2.82.77 1.01-.61 1.79-1.57 2.16-2.72-.95.56-2 .97-3.12 1.19-.9-.96-2.18-1.56-3.6-1.56-2.72 0-4.93 2.21-4.93 4.93 0 .39.04.77.13 1.13C7.69 8.31 4.07 6.34 1.64 3.43c-.42.72-.66 1.56-.66 2.46 0 1.7.86 3.2 2.17 4.08-.8-.03-1.55-.24-2.21-.61v.06c0 2.38 1.69 4.36 3.94 4.81-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.97 2.46 3.4 4.63 3.44-1.7 1.33-3.84 2.12-6.17 2.12-.4 0-.79-.02-1.18-.07 2.18 1.4 4.77 2.22 7.56 2.22 9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.01-.63.96-.69 1.79-1.56 2.45-2.55z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+    <div class="whatsapp-widget">
+        <div class="whatsapp-button" onclick="toggleChat()">
+            <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp">
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <h3>Chat with Us!</h3>
+            <p>Ask us anything, we're here to help.</p>
+            <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
+                Start WhatsApp Chat
+            </a>
+        </div>
+    </div>
+
+<script>
+function toggleChat() {
+    const chatWindow = document.getElementById('chatWindow'); 
+    chatWindow.classList.toggle('active');
+}
+</script>
+</body>
+</html>
