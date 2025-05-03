@@ -38,7 +38,35 @@
             </ul>
         </div>
     </header>
+ <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
 
+        // window.addEventListener('scroll', () => {
+        //     const scrollPosition = window.scrollY;
+        //     const windowHeight = window.innerHeight;
+        //     if (scrollPosition > windowHeight / 2) {
+        //         navMenu.classList.add('scrolled');
+        //         mobileMenu.classList.add('scrolled');
+        //     } else {
+        //         navMenu.classList.remove('scrolled');
+        //         mobileMenu.classList.remove('scrolled');
+        //     }
+        // });
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script> 
     <header class="hero bg-gray-100 py-16 text-center">
         <div class="hero-content" data-aos="fade-up">
             <h1 class="text-4xl font-bold">Cloud Resource Licensing & Support</h1>
@@ -152,28 +180,14 @@
     </div>
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.add('hidden');
-            });
-        });
+   
 
         function toggleChat() {
             const chatWindow = document.getElementById('chatWindow'); 
             chatWindow.classList.toggle('hidden');
         }
 
-      
-    </script>
+</script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
       <script>  AOS.init();</script>
 </body>
