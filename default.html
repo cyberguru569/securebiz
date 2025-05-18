@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Under Construction</title>
+    <title>SecureBiz</title>
+     <link rel="icon" type="image/jpg" href="LOGOCYBERBIZ-removebg-preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" type="text/css" href="styles.css"> 
+
+      <header class="logo-container">
+         <img src="LOGOCYBERBIZ-removebg-preview.png" alt="Secure Biz Logo" class="logo-img">
+        <nav class="nav-menu">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-white lg:text-black hover:black transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+
+        <div class="mobile-menu">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-gray-900 hover:text-blue-700 transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+   
+
+    <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+
+            // window.addEventListener('scroll', () => {
+            //     const scrollPosition = window.scrollY;
+            //     const windowHeight = window.innerHeight;
+            //     if (scrollPosition > windowHeight / 2) {
+            //         navMenu.classList.add('scrolled');
+            //         mobileMenu.classList.add('scrolled');
+            //     } else {
+            //         navMenu.classList.remove('scrolled');
+            //         mobileMenu.classList.remove('scrolled');
+            //     }
+            // });
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+ 
+
     <style>
-        body {
+       .default {
             margin: 0;
             height: 100vh;
             display: flex;
@@ -61,17 +125,39 @@
         }
     </style>
 </head>
-<body>
+<body class="default">
     <div class="container">
         <div class="icon">🌐</div>
         <h1>Page Under Construction</h1>
         <p>We're working hard to bring you something amazing. Check back soon!</p>
     </div>
-    <script>
+   
+    
+ <script>
         // Simple JS to ensure smooth animation performance
         window.addEventListener('load', () => {
             document.body.style.opacity = 1;
         });
     </script>
+ 
+
+<div class="whatsapp-widget">
+    <div class="whatsapp-button" onclick="toggleChat()">
+        <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp">
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <h3>Chat with Us!</h3>
+        <p>Ask us anything, we're here to help.</p>
+        <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
+            Start WhatsApp Chat
+        </a>
+    </div>
+</div>
+<script>
+function toggleChat() {
+    const chatWindow = document.getElementById('chatWindow'); 
+    chatWindow.classList.toggle('active');
+}
+</script>
 </body>
 </html>
