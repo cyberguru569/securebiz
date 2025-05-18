@@ -329,7 +329,7 @@
     <br/>
 <section id="contact">
     <footer class="bg-gray-800 text-white py-8">
-        <div class="mx-auto px-4">
+        <div class="mx-auto px-4 max-w-7xl">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex flex-col md:flex-row justify-between items-center w-full">
                     <div class="mb-6 md:mb-0">
@@ -341,20 +341,16 @@
                     <div class="mb-6 md:mb-0 text-center">
                         <img src="sblogo.jpg" alt="KSecureBiz" class="h-8 md:h-10 mb-4 mx-auto">
                         <p class="text-sm">© 2025 SecureBiz. All rights reserved.</p>
-                         <p class="text-sm">GSTN:07GPZPS0106D1ZO</p>
+                        <p class="text-sm">GSTN:07GPZPS0106D1ZO</p>
                     </div>
-                    <div class="mb-6 md:mb-0">
+                    <div class="follow-us mb-4 md:mb-0">
                         <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
-                        <div class="flex space-x-4">
-                            <a href="#home" class="hover:text-blue-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.59 8.08 8.36 9.44v-6.68H7.76v-2.76h2.64V9.72c0-2.61 1.59-4.04 3.92-4.04 1.11 0 2.07.08 2.35.12v2.72h-1.61c-1.26 0-1.5.6-1.5 1.48v1.94h3.01l-.39 2.76h-2.62v6.68c4.77-1.36 8.36-5.03 8.36-9.44 0-5.5-4.46-9.96-9.96-9.96z"/>
-                                </svg>
+                        <div class="flex items-center space-x-2">
+                            <a href="https://x.com/" class="hover:text-blue-300">
+                                <img style="border-radius:50px; width:30px;margin-left:10px;" src="x.jpg" alt="LinkedIn"/>
                             </a>
-                            <a href="#home" class="hover:text-blue-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23.95 4.83c-.88.39-1.83.65-2.82.77 1.01-.61 1.79-1.57 2.16-2.72-.95.56-2 .97-3.12 1.19-.9-.96-2.18-1.56-3.6-1.56-2.72 0-4.93 2.21-4.93 4.93 0 .39.04.77.13 1.13C7.69 8.31 4.07 6.34 1.64 3.43c-.42.72-.66 1.56-.66 2.46 0 1.7.86 3.2 2.17 4.08-.8-.03-1.55-.24-2.21-.61v.06c0 2.38 1.69 4.36 3.94 4.81-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.97 2.46 3.4 4.63 3.44-1.7 1.33-3.84 2.12-6.17 2.12-.4 0-.79-.02-1.18-.07 2.18 1.4 4.77 2.22 7.56 2.22 9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.01-.63.96-.69 1.79-1.56 2.45-2.55z"/>
-                                </svg>
+                            <a href="https://www.linkedin.com/company/securebiz/" class="hover:text-blue-300">
+                                <img style="border-radius:50px; width:30px;" src="in.jpg" alt="LinkedIn"/>
                             </a>
                         </div>
                     </div>
@@ -364,24 +360,18 @@
     </footer>
 </section>
 
-    <div class="whatsapp-widget">
-        <div class="whatsapp-button" onclick="toggleChat()">
-            <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp">
-        </div>
-        <div class="chat-window" id="chatWindow">
-            <h3>Chat with Us!</h3>
-            <p>Ask us anything, we're here to help.</p>
-            <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
-                Start WhatsApp Chat
-            </a>
-        </div>
+<div class="whatsapp-widget">
+    <div class="whatsapp-button" onclick="toggleChat()">
+        <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp">
     </div>
-
-<script>
-function toggleChat() {
-    const chatWindow = document.getElementById('chatWindow'); 
-    chatWindow.classList.toggle('active');
-}
+    <div class="chat-window" id="chatWindow">
+        <h3>Chat with Us!</h3>
+        <p>Ask us anything, we're here to help.</p>
+        <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
+            Start WhatsApp Chat
+        </a>
+    </div>
+</div>
 </script>
 </body>
 </html>
