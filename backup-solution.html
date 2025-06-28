@@ -1,63 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Backup Solutions | SecureBiz</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Biz</title>
+     <link rel="icon" type="image/jpg" href="LOGOCYBERBIZ-removebg-preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" type="text/css" href="styles.css"> 
+  <link rel="stylesheet" href="cloud-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!--     <style>
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #000;
+            margin: 2px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -75%;
+            width: 75%;
+            max-width: 300px;
+            height: 100%;
+            background: #fff;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+            transition: right 0.3s ease-in-out;
+            z-index: 999;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            margin-top: 40px;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu {
+                display: none;
+            }
+        }
+    </style>
+</head> -->
 </head>
 <body>
-  <div class="hero-section">
-    <div class="overlay">
-      <h1>Backup & Cyber Protection Solutions</h1>
-      <p>Reliable Backup for Business Continuity — Cloud, Physical, Office 365, and More</p>
+<header class="logo-container">
+        <img src="LOGOCYBERBIZ-removebg-preview.png" alt="Secure Biz Logo" class="logo-img">
+        <nav class="nav-menu">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-white lg:text-black hover:text-black transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-white lg:text-black hover:black transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+
+        <div class="mobile-menu">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">About</a></li>
+                <li><a href="services.html" class="text-gray-900 hover:text-blue-700 transition-colors font-bold text-lg">Services</a></li>
+                <li><a href="contact.html" class="text-gray-900 hover:text-blue-700 transition-colors whitespace-nowrap font-bold text-lg">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+   
+
+    <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+
+            // window.addEventListener('scroll', () => {
+            //     const scrollPosition = window.scrollY;
+            //     const windowHeight = window.innerHeight;
+            //     if (scrollPosition > windowHeight / 2) {
+            //         navMenu.classList.add('scrolled');
+            //         mobileMenu.classList.add('scrolled');
+            //     } else {
+            //         navMenu.classList.remove('scrolled');
+            //         mobileMenu.classList.remove('scrolled');
+            //     }
+            // });
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+   <header class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Backup Solutions</h1>
+      <p>A complete data protection solution with Backup Solutions, disaster recovery, and cybersecurity</p>
     </div>
-  </div>
+  </header>
 
-  <div class="content">
-    <section class="info-section fade-in">
-      <img src="images/cloud.jpg" alt="Cloud Backup">
-      <div>
-        <h2>Cloud Backup Solutions</h2>
-        <p>Our cloud-based backup uses hyperconverged infrastructure for seamless data protection. It offers encrypted storage, ransomware prevention, and rapid disaster recovery — all while reducing on-premise hardware costs and complexity.</p>
+  <main class="container">
+    <section class="intro" data-aos="fade-up">
+      <h2>Built for BUSINESSES who can’t afford to LOSE DATA</h2>
+      <p>At Secure Biz, we protect your critical business information with powerful backup and cyber protection solutions — from Cloud to Bare Metal, Office 365 to full-system recovery. Stay compliant, stay secure, stay online.</p>
+    </section>
+
+    <section class="features">
+      <div class="feature-box" data-aos="fade-right">
+        <img src="LOGOCYBERBIZ-removebg-preview.png" alt="Cloud Licensing Icon" />
+        <h3>🔒 Comprehensive Data Protection</h3>
+        <ul>
+          <li>We provide full-spectrum backup solutions for physical, virtual, and cloud environments. From file-level protection to full-system image backups, your business-critical data is safeguarded across all endpoints and servers.
+
+</li>
+        </ul>
+      </div>
+      <div class="feature-box" data-aos="fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" alt="Support Icon" />
+        <h3>☁️ Cloud Backup Solutions</h3>
+        <ul>
+          <li>Integrated backup + cybersecurity platform</li>
+          <li>AI-powered anti-malware and anti-ransomware</li>
+          <li>Vulnerability assessments and patch management</li>
+          <li>Centralized console for service providers</li>
+        </ul>
+      </div>
+      <div class="feature-box" data-aos="fade-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="Security Icon" />
+        <h3>📧 Microsoft 365 Backup</h3>
+        <ul>
+          <li>Protects Exchange, OneDrive, SharePoint, and Teams</li>
+          <li>Automated backups with flexible scheduling</li>
+          <li>Restore individual emails, files, or full mailboxes</li>
+          <li>Long-term retention to meet compliance</li>
+        </ul>
       </div>
     </section>
 
-    <section class="info-section fade-in">
-      <img src="images/cyber.jpg" alt="Cyber Protect Cloud">
-      <div>
-        <h2>Cyber Protect Cloud</h2>
-        <p>Unified cybersecurity and data protection for service providers. Defend against malware, automate patching, monitor vulnerabilities, and safeguard client environments — all from a single cloud console built for modern IT teams.</p>
-      </div>
+    <section class="why-us" data-aos="zoom-in">
+      <h2>✅ Why Choose Secure Biz for Backup?</h2>
+      <ul>
+        <li>✔️ AES-256 encrypted backups</li>
+        <li>✔️ Local + cloud hybrid options</li>
+        <li>✔️ Fast recovery times (RTO/RPO optimized)</li>
+        <li>✔️ Full compliance with industry standards (GDPR, HIPAA, ISO)</li>
+      </ul>
     </section>
 
-    <section class="info-section fade-in">
-      <img src="images/baremetal.jpg" alt="Bare Metal Backup">
-      <div>
-        <h2>Bare Metal Backup</h2>
-        <p>Get full-system recovery with image-level backups. Our bare-metal restore allows rapid restoration to any compatible hardware, preserving OS, applications, configurations, and user data in a single restore operation.</p>
-      </div>
+    <section class="cta" id="contact" data-aos="fade-up">
+      <h2>Need Help Managing Your Cloud?</h2>
+      <p>Let our experts audit your environment or build your strategy from scratch.</p>
+      <a href="mailto:contact@securebiz.com" class="cta-button">Request Free Consultation</a>
     </section>
+  </main>
+ <section id="contact">
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="mx-auto px-4 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                        <p class="text-sm">Email: <a href="mailto:info@securebiz.in" class="hover:text-blue-300">info@securebiz.in</a></p>
+                        <p class="text-sm">Phone: <a href="tel:+91 9818753407" class="hover:text-blue-300">+91 9818753407</a></p>
+                        <p class="text-sm">Address: Delhi, India</p>
+                    </div>
+                    <div class="mb-6 md:mb-0 text-center">
+            <img src="sblogo.jpg" style="border-radius:50px; height:75px;" alt="KSecureBiz" class="h-8 md:h-12 mb-4 mx-auto">
+                        <p class="text-sm">© 2025 SecureBiz. All rights reserved.</p>
+                        <p class="text-sm">GSTN:07GPZPS0106D1ZO</p>
+                    </div>
+                    <div class="follow-us mb-4 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                        <div class="flex items-center space-x-2">
+                            <a href="https://x.com/" class="hover:text-blue-300">
+                                <img style="border-radius:50px; width:30px;margin-left:10px;" alt="x" src="x.jpg" alt="LinkedIn"/>
+                            </a>
+                            <a href="https://www.linkedin.com/company/securebiz/" class="hover:text-blue-300">
+                                <img style="border-radius:50px; width:30px;" src="in.jpg" alt="LinkedIn"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
 
-    <section class="info-section fade-in">
-      <img src="images/acronis.jpg" alt="Acronis Cyber Protect">
-      <div>
-        <h2>Acronis® Cyber Protect</h2>
-        <p>Defend your business with the industry’s fastest backup and AI-powered malware protection. Acronis integrates backup, anti-ransomware, and system health monitoring in one solution, ensuring 24/7 resilience.</p>
-      </div>
-    </section>
+<div class="whatsapp-widget">
+    <div class="whatsapp-button" onclick="toggleChat()">
+        <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-4096.png" alt="WhatsApp">
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <h3>Chat with Us!</h3>
+        <p>Ask us anything, we're here to help.</p>
+        <a href="https://wa.me/9818753407?text=How%20can%20we%20help you?" target="_blank">
+            Start WhatsApp Chat
+        </a>
+    </div>
+</div>
+<script>
+function toggleChat() {
+    const chatWindow = document.getElementById('chatWindow'); 
+    chatWindow.classList.toggle('active');
+}
+</script>
 
-    <section class="info-section fade-in">
-      <img src="images/o365.jpg" alt="Office 365 Backup">
-      <div>
-        <h2>Microsoft Office 365 Backup</h2>
-        <p>Protect your Office 365 environment including Exchange Online, SharePoint, OneDrive, and Teams. Ensure compliance and restore flexibility with encrypted, automated cloud backups covering accidental deletions and data loss scenarios.</p>
-      </div>
-    </section>
-  </div>
-
-  <footer class="footer">
-    <p>&copy; 2025 SecureBiz.in | Data Protection & Backup Solutions</p>
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
