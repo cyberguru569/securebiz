@@ -1,125 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hyperconverged Infrastructure Solutions | SecureBiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hyperconverged Infrastructure | SecureBiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f0f4f8;
+      background-color: #f9f9f9;
       color: #333;
     }
-
     header {
-      background: linear-gradient(135deg, #1a237e, #3949ab);
-      padding: 20px;
+      background-color: #003366;
       color: white;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
     header h1 {
       margin: 0;
-      font-size: 2em;
     }
-
+    .btn-home {
+      background-color: #00bfff;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
     .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
-
+    h2 {
+      color: #003366;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
     .card {
       background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      padding: 20px;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1 1 30%;
+      min-width: 280px;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    .card i {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 0.5rem;
     }
-
-    .card h2 {
-      font-size: 1.25em;
-      color: #1a237e;
-      margin-bottom: 10px;
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
     }
-
-    .card p {
-      font-size: 0.95em;
-      line-height: 1.5;
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
     }
-
-    .whatsapp-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
+    .cta button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
-
-    .whatsapp-icon img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    .why-securebiz {
+      margin-top: 3rem;
     }
-
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.5em;
-      }
+    .why-securebiz ul {
+      list-style: none;
+      padding: 0;
+    }
+    .why-securebiz li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .why-securebiz li i {
+      color: #00bfff;
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Hyperconverged Infrastructure</h1>
-    <p>Secure, Scalable, and Simplified IT Solutions</p>
-  </header>
+<header>
+  <h1>SecureBiz</h1>
+  <a href="https://securebiz.in/index.html" class="btn-home">🏠 Go Home</a>
+</header>
 
-  <div class="container">
+<div class="container">
+  <h2>Hyperconverged Infrastructure</h2>
+  <p><strong>Built for BUSINESSES that need PERFORMANCE, SIMPLICITY & RESILIENCE</strong><br>
+  At Secure Biz, we empower your IT with robust Hyperconverged Infrastructure solutions — combining compute, storage, and virtualization into one seamless system. From private cloud to edge computing, ensure speed, scalability, and business continuity with a simplified infrastructure.</p>
+
+  <div class="cards">
     <div class="card">
-      <h2>Integrated Compute & Storage</h2>
-      <p>Combine computing and storage in a single appliance to reduce complexity and optimize resource utilization.</p>
+      <i class="fas fa-server"></i>
+      <h3>💻📦 Integrated Compute & Storage</h3>
+      <p>Seamlessly combines processing power and storage in one unified platform for maximum efficiency.</p>
     </div>
 
     <div class="card">
-      <h2>Scalable Architecture</h2>
-      <p>Scale out by simply adding nodes, ensuring linear performance growth and simplified expansion.</p>
+      <i class="fas fa-expand-arrows-alt"></i>
+      <h3>📐📈 Scalable Architecture</h3>
+      <p>Add nodes effortlessly to grow storage and performance without disruptions or downtime.</p>
     </div>
 
     <div class="card">
-      <h2>Data Protection & DR</h2>
-      <p>Built-in backup and disaster recovery tools to ensure your workloads are always protected and recoverable.</p>
+      <i class="fas fa-shield-alt"></i>
+      <h3>🛡️💾 Data Protection & DR</h3>
+      <p>Protect against ransomware, system failure, and data loss with built-in backup and disaster recovery tools.</p>
     </div>
 
     <div class="card">
-      <h2>Centralized Management</h2>
-      <p>Manage your entire infrastructure from a single console with intelligent monitoring and automation.</p>
+      <i class="fas fa-chart-line"></i>
+      <h3>🧠📊 Centralized Management</h3>
+      <p>Monitor and control your entire infrastructure from a single, easy-to-use dashboard.</p>
     </div>
 
     <div class="card">
-      <h2>Optimized TCO</h2>
-      <p>Reduce operational costs and hardware overhead with a fully software-defined solution.</p>
+      <i class="fas fa-coins"></i>
+      <h3>💰⚙️ Optimized TCO</h3>
+      <p>Reduce operational and capital expenses through efficient hardware usage and minimal maintenance.</p>
     </div>
 
     <div class="card">
-      <h2>Ideal for SMBs & Enterprises</h2>
-      <p>Flexible deployment options for small, medium, and large businesses, tailored to fit your IT strategy.</p>
+      <i class="fas fa-briefcase"></i>
+      <h3>🏢🚀 Ideal for SMBs & Enterprises</h3>
+      <p>Flexible and scalable for businesses of any size — from startups to large enterprises.</p>
     </div>
   </div>
 
-  <div class="whatsapp-icon">
-    <a href="https://wa.me/919999999999" target="_blank">
-      <img src="whatsapp-icon.png" alt="WhatsApp Chat">
-    </a>
+  <div class="why-securebiz">
+    <h2>Why Choose SecureBiz for HCI?</h2>
+    <ul>
+      <li><i class="fas fa-lock"></i> Enterprise-Grade Security and Reliability</li>
+      <li><i class="fas fa-tools"></i> Turnkey Deployment with Minimal IT Involvement</li>
+      <li><i class="fas fa-headset"></i> 24x7 Remote Support & Monitoring</li>
+      <li><i class="fas fa-cogs"></i> Custom-Built Solutions for Your Environment</li>
+      <li><i class="fas fa-rocket"></i> Future-Ready and Easily Scalable Infrastructure</li>
+    </ul>
   </div>
+
+  <div class="cta">
+    <button>📩 Contact Us for HCI Solutions</button>
+  </div>
+</div>
 
 </body>
 </html>
