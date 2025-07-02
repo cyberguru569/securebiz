@@ -118,7 +118,7 @@
 
         // Resize canvas on window resize
         window.addEventListener('resize', () => {
-            canvas.height = window.innerHeight/2;
+            canvas.height = window.innerHeight;
             canvas.width = window.innerWidth;
             drops.length = Math.floor(canvas.width / fontSize);
             for (let i = 0; i < drops.length; i++) {
