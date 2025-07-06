@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Protection | SecureBiz</title>
+
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .site-header {
+      background-color: #ffffff;
+      color: #003366;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .site-header .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: #003366;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95em;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    header.page-header {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card i {
+      font-size: 2.5em;
+      color: #0d47a1;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: #0d47a1;
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    .why-choose {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+
+    .why-choose h2 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .why-choose ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .why-choose li {
+      margin: 10px 0;
+      padding-left: 30px;
+      position: relative;
+      font-size: 1em;
+    }
+
+    .why-choose li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #1976d2;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-content div {
+      flex: 1 1 200px;
+    }
+
+    .footer-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .footer-content p,
+    .footer-content a {
+      font-size: 0.95em;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      color: white;
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 960px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <div class="site-header">
+    <div class="logo">SecureBiz</div>
+    <div class="nav-links">
+      <a href="https://securebiz.in/index.html">Home</a>
+      <a href="#">Solutions</a>
+      <a href="#">Contact</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Cloud Protection Solutions</h1>
+  </header>
+
+  <!-- Cards -->
+  <div class="card-container">
+    <div class="card">
+      <i class="fas fa-cloud-shield"></i>
+      <h2>Cloud Threat Defense</h2>
+      <p>Secure your cloud workloads against malware, intrusion, and unauthorized access.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-network-wired"></i>
+      <h2>Zero Trust Access</h2>
+      <p>Ensure only authorized users and devices can access cloud resources securely.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <h2>Data Backup & Recovery</h2>
+      <p>Protect critical data with automated cloud backups and fast recovery options.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-server"></i>
+      <h2>Multi-Cloud Security</h2>
+      <p>Manage security policies and visibility across AWS, Azure, GCP and more.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h2>Cloud Firewall</h2>
+      <p>Advanced perimeter protection with policy-based traffic filtering and logging.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-user-lock"></i>
+      <h2>Identity Protection</h2>
+      <p>Prevent credential theft and enforce strong authentication for cloud apps.</p>
+    </div>
+  </div>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose">
+    <h2>Why Choose SecureBiz for Cloud Protection?</h2>
+    <ul>
+      <li>End-to-end security for public, private, and hybrid clouds</li>
+      <li>AI-driven anomaly detection & automated responses</li>
+      <li>Compliance-ready solutions (ISO, GDPR, HIPAA)</li>
+      <li>Centralized dashboard for multi-cloud visibility</li>
+      <li>Expert support for secure cloud migration</li>
+      <li>24/7 monitoring and managed protection services</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>SecureBiz</h3>
+        <p>Your trusted partner in digital protection and cloud security.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="https://securebiz.in/index.html">Home</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Contact</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Email: info@securebiz.in</p>
+        <p>Phone: +91 9818753407</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
